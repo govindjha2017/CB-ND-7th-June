@@ -1,0 +1,36 @@
+p{
+    color: blue; 
+}
+
+#spclpara{
+    color: aquamarine;
+}
+
+p{
+    color: brown;
+}
+
+.para{
+    color: yellow;
+}
+
+p{
+    color: green;
+}
+
+/* Universal selector  */
+*{
+    margin: 0;
+    padding: 0;
+    color: gold;
+}
+
+a{
+    color: aquamarine;
+}
+
+/* attribute selector */
+
+a[href="https://github.com/"]{
+    color: darkgreen;
+}
