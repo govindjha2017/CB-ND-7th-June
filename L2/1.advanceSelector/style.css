@@ -1,0 +1,83 @@
+/* p{
+    color: green;
+}
+
+div p{
+    color: blueviolet;
+}
+
+.abc p{
+    color: aqua;
+} */
+
+/* p.para{
+    color: aqua;
+} */
+
+/* ul li{
+    color: aqua;
+} */
+
+/* child selector  */
+
+/* ul>li{
+    color: aqua;
+} */
+
+/* immediate sibling */
+
+/* li+li{
+    color: brown;
+}
+
+li.fav+li{
+    color: green;
+}
+
+.fav+li{
+    color: blueviolet;
+} */
+
+/* General sibling */
+
+/* .fav~li{
+    color: brown;
+} */
+
+/* //pseduo class */
+
+nav a:link{
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: yellow;
+}
+
+nav a:active{
+    color: red;
+}
+
+nav a:visited{
+    color: green;
+}
+
+/* ul li:first-child{
+    color: blue;
+}
+
+ul li:last-child{
+    color: brown;
+} */
+
+/* ul li:nth-child(2n+1){
+    color: blueviolet;
+} */
+/* ul li:nth-child(2n){
+    color: blueviolet;
+} */
+
+ul li:nth-child(3n+3){
+    color: blueviolet;
+}

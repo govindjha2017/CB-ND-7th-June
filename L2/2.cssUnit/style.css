@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    height: 150px;
+    width: 150px;
+    /* overflow: auto;
+    overflow: hidden; */
+    background-color: aqua;
+
+    height: 100vh;
+    width: 100vw;
+    width: 70vw;
+}
+
+div.child{
+    height: 75px;
+    width: 75px;
+    background-color: brown;
+    height: 50%;
+    width: 75%;
+}
+
+.child{
+    font-size: 20px;
+}
+
+.child p{
+    background-color: white;
+    /* font-size: 20px; */
+    /* font-size: 0.3em; */
+
+    font-size: 1.5em;
+    font-size: 1rem;
+}
+
+html{
+    font-size: 10px;
+}
