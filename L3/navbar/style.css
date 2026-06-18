@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    height: 75px;
+    background-color: #f7f4ed;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link{
+    /* border: 2px solid red; */
+    margin-right: 65px;
+}
+
+.logo{
+    /* border: 2px solid red; */
+    margin-left: 65px;
+}
+
+.link a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin-right: 15px;
+}
+
+#spclLink{
+    background-color: black;
+    color: white;
+    padding: 7px 14px;
+    border-radius: 60px;
+}

@@ -1,0 +1,16 @@
+div{
+    border: 2px solid red;
+    height: 100px;
+    width: 150px;
+    /* margin-left: 50px; */
+    /* display: inline; */
+    display: inline-block;
+}
+
+span{
+    border: 2px solid red;
+    height: 100px;
+    width: 150px;
+    /* margin-left: 50px; */
+     /* display: block; */
+}
