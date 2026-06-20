@@ -1,0 +1,16 @@
+.para{
+    font-size: 2em;
+    /* line-height: 100px; */
+    /* line-height: 50px;
+    word-spacing: 100px; */
+    /* letter-spacing: 10px; */
+    /* font-weight: bold;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Courier New', Courier, monospace; */
+
+    font-style: italic;
+    font-style: normal;
+    font-style: oblique;
+
+}
