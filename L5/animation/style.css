@@ -1,0 +1,73 @@
+.box{
+    height: 150px;
+    width: 150px;
+    border: 2px solid red;
+    /* animation-name: anime;
+    animation-duration: 4s; */
+    /* animation-fill-mode: backwards; */
+    /* animation-fill-mode: forwards;
+    animation-delay: 5s; */
+    position: relative;
+    /* animation-name: chnagePos;
+    animation-duration: 4s; */
+
+    animation-name: abc;
+    animation-duration: 4s;
+    animation-iteration-count: 5;
+}
+
+@keyframes anime{
+    from{
+        background-color: aqua;
+    }
+    to{
+        background-color: brown;
+        border-radius: 50%;
+    }
+}
+
+@keyframes chnagePos{
+   /* from{
+     left: 0;
+   }
+   to{
+    left: 200px;
+   } */
+
+   0%{
+    top: 0px;
+     left: 0;
+   }
+   50%{
+    top: 0px;
+    left: 200px;
+    border-radius: 50%;
+   }
+   100%{
+    left: 300px;
+    top: 300px;
+   }
+}
+
+@keyframes abc{
+    0%{
+        top: 0;
+        left: 0;
+    }
+    25%{
+        top: 0;
+        left: 250px
+    }
+    50%{
+        top: 250px;
+        left: 250px;
+    }
+    75%{
+        top: 250px;
+        left: 0px;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}

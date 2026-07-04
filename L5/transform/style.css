@@ -1,0 +1,45 @@
+.box{
+    height: 350px;
+    width: 200px;
+    border: 2px solid red;
+    margin: 100px auto;
+    transition-duration: 2s;
+    transition-delay: 3s;
+}
+
+.box:hover{
+    background-color: aquamarine;
+    /* transform: translateX(100px);
+    transform: translateX(-100px);
+    transform: translateY(100px);
+    transform: translateY(-100px);
+    transform: translateZ(100px);
+    transform: translateZ(-100px); */
+    /* transform: translate(100px); */
+    /* transform: translateX(100px) translateY(100px); */
+    /* transform: translate(100px,100px); */
+
+    /* transform: rotateX(45deg);
+    transform: rotateX(90deg); */
+    /* transform: rotateY(45deg);
+    transform: rotateY(90deg);
+    transform: rotateY(120deg);
+    transform: rotateY(-145deg); */
+
+    /* transform: rotateZ(45deg);
+    transform: rotateZ(-45deg); */
+
+    /* transform: rotate(405deg); */
+
+    /* transform: scaleX(1.5); */
+    /* transform: scaleY(0.7); */
+    /* transform: scale(1.2); */
+    /* transform: scale(1.05); */
+    
+    transform: rotate(45deg) scale(1.5) translateX(150px);
+
+    /* transform: skew(45deg); */
+
+
+    
+}
