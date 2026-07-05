@@ -23,15 +23,19 @@
 .rocket{
     height: 180px;
     width: 180px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     position: absolute;
     left: 400px;
     bottom: 150px;
     transform: rotate(45deg);
-    animation-name: rocketMove;
+    /* animation-name: rocketMove;
     animation-duration: 2s;
     animation-timing-function: linear;
-    animation-iteration-count: 3;
+    animation-iteration-count: 3; */
+
+    animation: rocketMove 2s linear 3,
+               rocketRotate 1s ease-in-out 11s forwards,
+               rocketLaunch 2s ease-in 12.5s forwards;
 }
 
 .rocket img{
@@ -57,10 +61,22 @@
     }
 }
 
+@keyframes rocketRotate{
+    100%{
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes rocketLaunch{
+    100%{
+        bottom: 400vh;
+    }
+}
+
 .cody{
     height: 150px;
     width: 150px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     position: absolute;
     bottom: 150px;
     left: -400px;
