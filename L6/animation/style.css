@@ -1,0 +1,61 @@
+.box{
+    height: 150px;
+    width: 150px;
+    border: 2px solid red;
+    position: relative;
+    animation-name: changePos;
+    animation-duration: 6s;
+    background-color: green;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: 3; */
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    /* animation-direction: normal;
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse; */
+    animation-timing-function: linear;
+    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
+    animation-timing-function: ease-in-out;
+    animation-timing-function: cubic-bezier(0,-1.32, 1, 2.21);
+    animation-timing-function: cubic-bezier(1, 2.14, 0.01,-0.92);
+}
+
+
+@keyframes changePos{
+    0%{
+        top: 0;
+        left: 0;
+        border-radius: 0%;
+        background-color: aqua;
+    }
+    25%{
+        top: 0;
+        left: 250px;
+        border-radius: 50%;
+        background-color: blue;
+        transform: rotate(135deg);
+    }
+    50%{
+        top: 250px;
+        left: 250px;
+        border-radius: 0%;
+        background-color: brown;
+        transform: rotate(-135deg);
+    }
+    75%{
+        top: 250px;
+        left: 0;
+        border-radius: 50%;
+        background-color: blueviolet;
+        transform: rotate(135deg);
+    }
+    100%{
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        background-color: aqua;
+        transform: rotate(-135deg);
+    }
+}
