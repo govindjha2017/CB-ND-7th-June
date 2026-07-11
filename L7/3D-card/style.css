@@ -1,0 +1,41 @@
+.container{
+    height: 300px;
+    width: 250px;
+    border: 2px solid black;
+    margin: 50px auto;
+    transition-duration: 2s;
+    transform-style: preserve-3d;
+    box-shadow: 5px 5px 10px black;
+}
+
+.container:hover{
+    background-color: aquamarine;
+    /* transform: rotateZ(45deg); */
+    transform: rotateY(180deg);
+}
+
+body{
+    perspective: 500px;
+}
+
+.sideA , .sideB{
+    backface-visibility: hidden;
+    color: white;
+}
+
+.sideA{
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1666852327656-5e9fd213209b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: 0px -50px;
+    position: absolute;
+}
+
+.sideB{
+    height: 100%;
+    width: 100%;
+    transform: rotateY(180deg);
+    position: absolute;
+    color: black;
+}
