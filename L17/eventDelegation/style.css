@@ -1,0 +1,11 @@
+.child{
+    height: 150px;
+    width: 150px;
+    border: 2px solid red;
+}
+
+.container{
+    display: flex;
+    border: 2px solid green;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,58 @@
+.container{
+    border: 2px solid red;
+    height: 50vh;
+    width: 40vw;
+    margin: 40px auto;
+}
+
+.input{
+    border: 2px solid green;
+}
+
+#inp{
+    width: 70%;
+    height: 30px;
+    font-size: 1.5em;
+    margin-left: 30px;
+}
+
+#btn{
+    width: 20%;
+    height: 30px;
+    
+}
+
+.todos{
+    display: flex;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3em;
+}
+
+.sectionA{
+    display: flex;
+    /* border: 2px solid red; */
+    margin-left: 30px;
+    gap: 20px;
+}
+
+.sectionB{
+    /* border: 2px solid red; */
+    margin-right: 40px;
+    display: flex;
+    gap: 20px;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+.todosList{
+    border: 3px solid magenta;
+}
+
+
+.up-arrow:hover , .down-arrow:hover , .checkBox:hover , .bin:hover{
+    cursor: pointer;
+}
