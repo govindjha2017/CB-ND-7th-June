@@ -1,0 +1,17 @@
+.input{
+    /* border: 2px solid red; */
+    /* display: flex;
+    justify-content: center; */
+
+    text-align: center;
+}
+
+#inp{
+    height:35px;
+    width: 300px;
+    font-size: 1.5em;
+}
+
+#btn{
+    height:35px;
+}
