@@ -79,3 +79,8 @@
 .desc{
     color: rgba(0, 0, 0,0.5);
 }
+
+.msg{
+    text-align: center;
+    font-size: 2em;
+}
