@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            border: 2px solid black;
+        }
+        .container{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        nav{
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/user/new">create new user</a>
+    </nav>
+    <h3>All users:</h3>
+
+    <div class="container">
+        <% for(let user of users){ %>
+            <div class="card">
+                <h3>Username: <%= user.username %></h3>
+                <p>Age: <%= user.age %></p>
+                <p>City: <%= user.city %></p>
+                <a href="/users/<%= user.id %>">Show</a>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

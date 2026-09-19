@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Todos:</h2>
+
+    <%= todosData %>
+
+    <br>
+
+    <ol>
+        <% for(let data of todosData){ %>
+            <li><%=data%></li>
+        <%}%>
+    </ol>
+
+    <% if(bool){ %>
+        <h3>true tha</h3>
+    <% }else{ %>
+        <h3>false tha</h3>
+    <% } %>
+
+</body>
+</html>
