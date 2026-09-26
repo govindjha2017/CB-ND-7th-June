@@ -1,0 +1,299 @@
+Microsoft Windows [Version 10.0.26200.9457]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\govin>mongosh
+Current Mongosh Log ID: 6ab771c95636e678ad7c2906
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.7.0
+Using MongoDB:          8.2.5
+Using Mongosh:          2.7.0
+mongosh 2.12.0 is available for download: https://www.mongodb.com/try/download/shell
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2026-09-20T02:37:42.339+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+test> show dbs
+Ecom          172.00 KiB
+Ecom-CB       152.00 KiB
+Ecom-CC       172.00 KiB
+Ecom-CD        40.00 KiB
+Ecom-hons     180.00 KiB
+SEC-CC         24.00 KiB
+SSR-CB         84.00 KiB
+SSR-CC         80.00 KiB
+SSR-CD         76.00 KiB
+SSR-hons      128.00 KiB
+Todos          72.00 KiB
+VGU            72.00 KiB
+VGU-Ecom       64.00 KiB
+VGU_AUTH       72.00 KiB
+abc            40.00 KiB
+admin          40.00 KiB
+auth_CB        64.00 KiB
+auth_CC        72.00 KiB
+auth_CD       108.00 KiB
+auth_hons      72.00 KiB
+config         72.00 KiB
+dukan          60.00 KiB
+hons           24.00 KiB
+local          80.00 KiB
+sec-CB         24.00 KiB
+sec-CD         24.00 KiB
+temp           12.00 KiB
+temp_url       96.00 KiB
+test           40.00 KiB
+todoProj        8.00 KiB
+todoapp        64.00 KiB
+urlShortener  104.00 KiB
+url_CB        100.00 KiB
+url_CD        104.00 KiB
+url_cc        104.00 KiB
+url_hons       72.00 KiB
+test> use CBND7thJUNE
+switched to db CBND7thJUNE
+CBND7thJUNE> db
+CBND7thJUNE
+CBND7thJUNE> db.dropDatabase()
+{ ok: 1, dropped: 'CBND7thJUNE' }
+CBND7thJUNE> show dbs
+Ecom          172.00 KiB
+Ecom-CB       152.00 KiB
+Ecom-CC       172.00 KiB
+Ecom-CD        40.00 KiB
+Ecom-hons     180.00 KiB
+SEC-CC         24.00 KiB
+SSR-CB         84.00 KiB
+SSR-CC         80.00 KiB
+SSR-CD         76.00 KiB
+SSR-hons      128.00 KiB
+Todos          72.00 KiB
+VGU            72.00 KiB
+VGU-Ecom       64.00 KiB
+VGU_AUTH       72.00 KiB
+abc            40.00 KiB
+admin          40.00 KiB
+auth_CB        64.00 KiB
+auth_CC        72.00 KiB
+auth_CD       108.00 KiB
+auth_hons      72.00 KiB
+config         72.00 KiB
+dukan          60.00 KiB
+hons           24.00 KiB
+local          80.00 KiB
+sec-CB         24.00 KiB
+sec-CD         24.00 KiB
+temp           12.00 KiB
+temp_url       96.00 KiB
+test           40.00 KiB
+todoProj        8.00 KiB
+todoapp        64.00 KiB
+urlShortener  104.00 KiB
+url_CB        100.00 KiB
+url_CD        104.00 KiB
+url_cc        104.00 KiB
+url_hons       72.00 KiB
+CBND7thJUNE> use CBND7thJune
+switched to db CBND7thJune
+CBND7thJune> clear
+ReferenceError: clear is not defined
+CBND7thJune> db.createCollection("users")
+{ ok: 1 }
+CBND7thJune> show collections
+users
+CBND7thJune> db.users.drop()
+true
+CBND7thJune> show collections
+
+CBND7thJune> db.createCollection("users")
+{ ok: 1 }
+CBND7thJune> show collections
+users
+CBND7thJune> db.users.insertOne({name:'rahul',age:45,city:'Delhi'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ab7758e5636e678ad7c2907')
+}
+CBND7thJune> db.users.insertMany([{name:'ajay',age:32,city:'kanpur'},{name:'teena',age:24,city:'Noida'}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6ab777ed5636e678ad7c2908'),
+    '1': ObjectId('6ab777ed5636e678ad7c2909')
+  }
+}
+CBND7thJune> db.users.find()
+[
+  {
+    _id: ObjectId('6ab7758e5636e678ad7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  },
+  {
+    _id: ObjectId('6ab777ed5636e678ad7c2908'),
+    name: 'ajay',
+    age: 32,
+    city: 'kanpur'
+  },
+  {
+    _id: ObjectId('6ab777ed5636e678ad7c2909'),
+    name: 'teena',
+    age: 24,
+    city: 'Noida'
+  }
+]
+CBND7thJune> db.users.find({city:'Delhi'})
+[
+  {
+    _id: ObjectId('6ab7758e5636e678ad7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  }
+]
+CBND7thJune> db.users.find({age:32})
+[
+  {
+    _id: ObjectId('6ab777ed5636e678ad7c2908'),
+    name: 'ajay',
+    age: 32,
+    city: 'kanpur'
+  }
+]
+CBND7thJune> db.users.find({age:32,city:'Delhi'})
+
+CBND7thJune> db.users.find({age:{$gt:32}})
+[
+  {
+    _id: ObjectId('6ab7758e5636e678ad7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  }
+]
+CBND7thJune> db.users.find({age:{$gte:32}})
+[
+  {
+    _id: ObjectId('6ab7758e5636e678ad7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  },
+  {
+    _id: ObjectId('6ab777ed5636e678ad7c2908'),
+    name: 'ajay',
+    age: 32,
+    city: 'kanpur'
+  }
+]
+CBND7thJune> db.users.find({age:{$ne:32}})
+[
+  {
+    _id: ObjectId('6ab7758e5636e678ad7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  },
+  {
+    _id: ObjectId('6ab777ed5636e678ad7c2909'),
+    name: 'teena',
+    age: 24,
+    city: 'Noida'
+  }
+]
+CBND7thJune> db.users.find({city:{$in:['Delhi','Noida']}})
+[
+  {
+    _id: ObjectId('6ab7758e5636e678ad7c2907'),
+    name: 'rahul',
+    age: 45,
+    city: 'Delhi'
+  },
+  {
+    _id: ObjectId('6ab777ed5636e678ad7c2909'),
+    name: 'teena',
+    age: 24,
+    city: 'Noida'
+  }
+]
+CBND7thJune> db.users.find({city:{$nin:['Delhi','Noida']}})
+[
+  {
+    _id: ObjectId('6ab777ed5636e678ad7c2908'),
+    name: 'ajay',
+    age: 32,
+    city: 'kanpur'
+  }
+]
+CBND7thJune> db.users.findOne()
+{
+  _id: ObjectId('6ab7758e5636e678ad7c2907'),
+  name: 'rahul',
+  age: 45,
+  city: 'Delhi'
+}
+CBND7thJune> db.users.insertOne({name:'rohit',age:32,city:'Noida'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('6ab77b2d5636e678ad7c290a')
+}
+CBND7thJune> db.users.find({age:32})
+[
+  {
+    _id: ObjectId('6ab777ed5636e678ad7c2908'),
+    name: 'ajay',
+    age: 32,
+    city: 'kanpur'
+  },
+  {
+    _id: ObjectId('6ab77b2d5636e678ad7c290a'),
+    name: 'rohit',
+    age: 32,
+    city: 'Noida'
+  }
+]
+CBND7thJune> db.users.findOne({age:32})
+{
+  _id: ObjectId('6ab777ed5636e678ad7c2908'),
+  name: 'ajay',
+  age: 32,
+  city: 'kanpur'
+}
+CBND7thJune> db.users.updateOne({age:32},{$set:{city:'Mumbai'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+CBND7thJune> db.users.updateMany({age:32},{$set:{city:'Pune'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+CBND7thJune> db.users.updateMany({},{$set:{country:'India'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 4,
+  modifiedCount: 4,
+  upsertedCount: 0
+}
+CBND7thJune> db.users.deleteOne({age:32})
+{ acknowledged: true, deletedCount: 1 }
+CBND7thJune> db.users.deleteMany({$lt:{age:40}})
+MongoServerError: unknown top level operator: $lt. If you have a field name that starts with a '$' symbol, consider using $getField or $setField.
+CBND7thJune> db.users.deleteMany({age:{$lt:40}})
+{ acknowledged: true, deletedCount: 2 }
+CBND7thJune> db.users.deleteMany({})
+{ acknowledged: true, deletedCount: 1 }
+CBND7thJune> db.users.renameCollection("customers")
+{ ok: 1 }
+CBND7thJune>
