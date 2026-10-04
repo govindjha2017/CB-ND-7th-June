@@ -1,0 +1,29 @@
+#head{
+    text-align: center;
+}
+
+.main-head{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid red;
+    width: 70vw;
+    margin: auto;
+}
+
+/* .main-head h2{
+    border: 2px solid black;
+} */
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    margin: auto;
+    align-items: center;
+}
+
+.input{
+    width: 70vw;
+    margin: 30px auto;
+    
+}
