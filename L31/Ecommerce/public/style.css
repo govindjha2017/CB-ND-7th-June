@@ -1,0 +1,30 @@
+#form-delete{
+    display: inline;
+}
+
+
+
+.abc{
+    margin: auto;
+    width: 30vw;
+}
+
+.errorBox{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorBox p{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.flashMsg{
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    margin: 20px auto;
+
+}

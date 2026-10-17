@@ -1,0 +1,25 @@
+<%- layout("layout/boilerplate.ejs") %>
+
+<div class="container d-flex flex-wrap gap-2">
+    <% for(let product of productsData){ %>
+        <div class="card" style="width: 18rem;">
+            <img height="170px" src=<%= product.image %> class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><%= product.name %></h5>
+                <h5 class="card-title">$<%= product.price %></h5>
+                <p class="card-text"><%= product.desc %></p>
+                <a href="/products/<%= product._id %>" class="btn btn-primary">Show</a>
+                <a href="/cart/add/<%= product._id %>" class="btn btn-success">Add to cart</a>
+
+                <%if(currUser && currUser.role=="seller"){%>
+                    <a href="/products/<%= product._id %>/edit" class="btn btn-primary">Edit</a>
+                    <form id="form-delete" action="/products/<%= product._id %>?_method=delete"  method="post">
+                        <button class="btn btn-danger">Delete</button>
+                    </form>
+                <%}%>
+            </div>
+        </div>
+    <% } %>
+</div>
+
+<%- include('./partials/footer.ejs') %>
