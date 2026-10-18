@@ -1,0 +1,44 @@
+<%- layout('layout/boilerplate.ejs') %>
+
+
+<%if(userCart.length==0){%>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+        <p style="font-size: 2em; font-weight: bold;">Your cart is empty</p>
+    </div>
+<%}else{%>
+    <div class="row">
+        <div class="col-6">
+            <%for(let cartItem of userCart){%>
+                <div class="abcd">
+                    <div class="cartItem">
+                        <img width="250px" src=<%=cartItem.productId.image%> >
+                        <div>
+                            <h2><%=cartItem.productId.name%></h2>
+                            <p class="cartPrice">Price:<%=cartItem.productId.price%></p>
+                            <p class="cartQuantity">Quantity: <%=cartItem.quantity %></p>
+                            <a href="/cart/minus/<%=cartItem.productId._id%>" class="btn btn-primary">-</a>
+                            <a href="/cart/add/<%=cartItem.productId._id%>" class="btn btn-primary">+</a>
+                        </div>
+                    </div>
+                </div>
+            <%}%>
+        </div>
+        <div id="abc" class="col-6">
+            <div id="bill-sumary">
+                <h2>Bill summary: </h2>
+                <%for(let cartItem of userCart){%>
+                    <div class="d-flex gap-3">
+                        <p><%=cartItem.productId.name%></p>
+                        <p><%=cartItem.productId.price%>*<%=cartItem.quantity %>=  <%=(cartItem.productId.price)*(cartItem.quantity ) %></p>
+                    </div>
+                <%}%>
+
+                <h3>Total Price : <%= totalPrice %></h3>
+
+                <button id="placeOrder" class="btn btn-success">Place Order</button>
+
+            </div>
+        </div>
+    </div>
+<%}%>
+
