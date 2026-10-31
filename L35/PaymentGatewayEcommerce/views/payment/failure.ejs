@@ -1,0 +1,8 @@
+<%- layout("layout/boilerplate.ejs") %>
+
+<h2>Payment failed!</h2>
+
+<p>order_id: <%= order.order_id%></p>
+<p>order_status: <%= order.order_status%> </p>
+
+<a href="/users/cart">Try again</a>

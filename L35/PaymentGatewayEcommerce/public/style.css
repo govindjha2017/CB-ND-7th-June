@@ -1,0 +1,61 @@
+#form-delete{
+    display: inline;
+}
+
+
+
+.abc{
+    margin: auto;
+    width: 30vw;
+}
+
+.errorBox{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorBox p{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.flashMsg{
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    margin: 10px auto;
+
+}
+
+
+
+.cartPrice , .cartQuantity{
+    font-size: 2em;
+    
+}
+
+#abc{
+    border: 3px solid green;
+}
+
+#placeOrder{
+    margin-top: 25px;
+}
+
+#bill-sumary{
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.cartItem{
+    border: 2px solid blue;
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: center;
+    gap: 30px;
+
+    margin: 30px;
+}
+
